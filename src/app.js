@@ -124,13 +124,13 @@ const checkAnswer = (e) => {
     const selectedAnswer = e.target;
     const isCorrect = selectedAnswer.dataset.correct === 'true';
     if(isCorrect){
-        selectedAnswer.classList.add('bg-green-600');
+        selectedAnswer.classList.add('bg-[#65B741]');
         selectedAnswer.classList.remove('hover:bg-slate-500');
         console.log('hi');
         correctAnswer++;
     }
     else{
-        selectedAnswer.classList.add('bg-red-600')
+        selectedAnswer.classList.add('bg-[#EF4040]')
         selectedAnswer.classList.remove('hover:bg-slate-500');
         console.log('hool');
     }
@@ -138,7 +138,7 @@ const checkAnswer = (e) => {
         el.classList.remove('hover:bg-slate-500',);
         el.classList.add('cursor-not-allowed')
         if(el.dataset.correct === 'true'){
-        el.classList.add('bg-green-600');
+        el.classList.add('bg-[#65B741]');
         el.classList.remove('hover:bg-slate-500');
         nextBTN.style.display = 'block';
     }
