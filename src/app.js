@@ -127,12 +127,13 @@ const checkAnswer = (e) => {
         selectedAnswer.classList.add('bg-[#65B741]');
         selectedAnswer.classList.remove('hover:bg-slate-500');
         console.log('hi');
-        correctAnswer++;
+        ++correctAnswer;
     }
     else{
         selectedAnswer.classList.add('bg-[#EF4040]')
         selectedAnswer.classList.remove('hover:bg-slate-500');
         console.log('hool');
+        // correctAnswer -= 1;
     }
     Array.from(answersButton.children).forEach(el =>{
         el.classList.remove('hover:bg-slate-500',);
@@ -173,6 +174,7 @@ const scoreFun = () => {
         answersButton.appendChild(textForScore)
         textForScore.addEventListener('click',()=>{
             questionIndex = 0;
+            correctAnswer = 0;
             changeQuestion();
         })
 }
