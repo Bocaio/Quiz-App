@@ -107,7 +107,7 @@ const changeQuestion = () => {
     currentQuiz.answers.forEach(el => {
         const answerBtn = document.createElement('button');
         answerBtn.innerText = el.answer;
-        answerBtn.classList.add('border','border-2','rounded-sm','w-full','mt-2','border-black','p-1','text-left','hover:bg-slate-500')
+        answerBtn.classList.add('border','border-2','rounded-sm','w-full','mt-2','border-black','p-1','pl-4','text-lg','text-left','hover:bg-slate-500')
         answersButton.appendChild(answerBtn);
         if(el.correct){
             answerBtn.dataset.correct = el.correct
