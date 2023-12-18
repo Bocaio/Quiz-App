@@ -45,28 +45,28 @@ const questions = [
                 answer:'Thor',correct:false,
             },
             {
-                answer:'Captain America',correct:false,
+                answer:'Captain America',correct:true,
             },
             {
-                answer:'Kang',correct:true,
+                answer:'Vision',correct:false,
             }
 
         ]
     },
     {
-        question:"Who is the weakest avenger?",
+        question:"Who is the most handsome avenger?",
         answers: [
             {
                 answer:'Hulk',correct:true,
             },
             {
-                answer:'Black Widow',correct:false,
+                answer:'Spider-man',correct:false,
             },
             {
-                answer:'Groot',correct:false,
+                answer:'Iron-man',correct:false,
             },
             {
-                answer:'Hawkeye',correct:false,
+                answer:'Thor',correct:false,
             }
 
         ]
