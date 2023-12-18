@@ -98,11 +98,12 @@ const questiontab = document.querySelector(`#questiontab`)
 const answersButton = document.querySelector(`#answersButton`)
 const quiz = document.querySelector(`#quiz`)
 let correctAnswer = 0;
+let questionnumber = 1;
 
 const changeQuestion = () => {
     resetFun();
     
-        questiontab.innerText = questions[questionIndex].question;
+        questiontab.innerText =questionnumber+'. '+ questions[questionIndex].question;
     const currentQuiz = questions[questionIndex];
     currentQuiz.answers.forEach(el => {
         const answerBtn = document.createElement('button');
@@ -115,6 +116,7 @@ const changeQuestion = () => {
         answerBtn.addEventListener('click',checkAnswer)
     })
     ++questionIndex;
+    ++questionnumber;
     
     
 
@@ -140,6 +142,7 @@ const checkAnswer = (e) => {
         el.classList.add('cursor-not-allowed')
         if(el.dataset.correct === 'true'){
         el.classList.add('bg-[#65B741]');
+        el.classList.add('text-white');
         el.classList.remove('hover:bg-slate-500');
         nextBTN.style.display = 'block';
     }
@@ -170,11 +173,12 @@ const scoreFun = () => {
     questiontab.innerText = `Your Score is ${correctAnswer}/${questions.length}`
         const textForScore = document.createElement('button')
         textForScore.innerText = "Start Again";
-        textForScore.classList.add('bg-blue-600','py-1','px-6','rounded-sm')
+        textForScore.classList.add('bg-blue-600','mt-5','text-lg','font-semibold','text-white','py-1','px-6','rounded-sm')
         answersButton.appendChild(textForScore)
         textForScore.addEventListener('click',()=>{
             questionIndex = 0;
             correctAnswer = 0;
+            questionnumber = 1;
             changeQuestion();
         })
 }

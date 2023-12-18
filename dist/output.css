@@ -592,6 +592,10 @@ video {
   margin-top: 0.75rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .block {
   display: block;
 }
@@ -653,11 +657,6 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
-.bg-\[\#2B2A4C\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(43 42 76 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#65B741\] {
   --tw-bg-opacity: 1;
   background-color: rgb(101 183 65 / var(--tw-bg-opacity));
@@ -688,6 +687,18 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[url\(\'https\:\/\/wallpapercave\.com\/wp\/wp2436369\.jpg\'\)\] {
+  background-image: url('https://wallpapercave.com/wp/wp2436369.jpg');
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
+}
+
 .p-0 {
   padding: 0px;
 }
@@ -714,8 +725,8 @@ video {
   padding-left: 1rem;
 }
 
-.pt-32 {
-  padding-top: 8rem;
+.pt-52 {
+  padding-top: 13rem;
 }
 
 .text-left {
@@ -749,9 +760,18 @@ video {
   font-weight: 600;
 }
 
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.opacity-80 {
+  opacity: 0.8;
 }
 
 .hover\:bg-slate-500:hover {
@@ -767,11 +787,6 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:my-5 {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
-  }
-
   .md\:w-2\/5 {
     width: 40%;
   }
